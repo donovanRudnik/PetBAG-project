@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Dog {
 
-	//Initialized field variables. petType, petName, petAge, and daysStay to be moved to Pet class later
+	//Initialized field variables. petType, petName, petAge, daysStay, and amountDue to be moved to Pet class later
 	String petType;
 	String petName;
 	int petAge;
@@ -26,7 +26,7 @@ public class Dog {
 		amountDue = 0.0;
 	}
 	
-	//Overloaded constructor
+	//Overloaded constructor for Dog object. Able to pass each attribute as an argument.
 	public Dog(String petType, String petName, int petAge, int daysStay, int dogSpaceNumber, double dogWeight, boolean grooming, double amountDue) {
 		this.petType = petType;
 		this.petName = petName;
@@ -118,41 +118,5 @@ public class Dog {
 		return this.amountDue;
 	}
 	
-	//Method for creating a new dog object for testing purposes TODO: Take this out before submitting.
-	public static void main(String[] args) {
-		Scanner scnr = new Scanner(System.in);
-		Dog dog1 = new Dog();
-		
-		String userPetType;
-		String userPetName;
-		int userPetAge;
-		int userDaysStay;
-		int userSpaceNum;
-		double userWeight;
-		boolean userGrooming;
-		double userAmountDue;
-		
-		System.out.println("Enter pet type:");
-		userPetType = scnr.nextLine();
-		dog1.setPetType(userPetType);
-		
-		System.out.println("Name:");
-		userPetName = scnr.nextLine();
-		dog1.setPetName(userPetName);
-		
-		System.out.println("Age:");
-		userPetAge = scnr.nextInt();
-		dog1.setPetAge(userPetAge);
-		
-		System.out.print("Name: ");
-		System.out.print("Age: ");
-		System.out.println("Type: ");
-		System.out.println(dog1.getPetName());
-		System.out.println(dog1.getPetAge());
-		System.out.println(dog1.getPetType());
-		
-		scnr.close();
-
-	}
 
 }
