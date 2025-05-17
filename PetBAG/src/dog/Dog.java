@@ -1,6 +1,14 @@
-package dog;
+/*
+	Dog.java
+Dog class for the PetBAG project. The purpose of this class is to have
+the ability to instantiate a new dog object and update values related to
+a specific dog. This records the type, name, age, length of stay,
+space number, weight, grooming option, and total amount due of a specific dog.
 
-import java.util.Scanner;
+Author: Donovan Rudnik
+Creation Date: 5/16/2025
+*/
+package dog;
 
 public class Dog {
 
@@ -14,7 +22,7 @@ public class Dog {
 	boolean grooming;
 	double amountDue;
 	
-	//Default constructor for a Dog object
+	//Default constructor for a Dog object. TODO: Change when making Pet class
 	public Dog() {
 		petType = "Dog";
 		petName = "NoName";
@@ -26,7 +34,7 @@ public class Dog {
 		amountDue = 0.0;
 	}
 	
-	//Overloaded constructor for Dog object. Able to pass each attribute as an argument.
+	//Overloaded constructor for Dog object. Able to pass each attribute as an argument. TODO: Change when making Pet class
 	public Dog(String petType, String petName, int petAge, int daysStay, int dogSpaceNumber, double dogWeight, boolean grooming, double amountDue) {
 		this.petType = petType;
 		this.petName = petName;
