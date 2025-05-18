@@ -7,83 +7,33 @@ space number, weight, grooming option, and total amount due of a specific dog.
 
 Author: Donovan Rudnik
 Creation Date: 5/16/2025
+Edit date: 5/18/2025 by Donovan Rudnik
+	I removed the attributes, setters, and getters that belong to the Pet class
+	and changed the constructors accordingly.
 */
 package dog;
 
 public class Dog {
 
-	//Initialized field variables. petType, petName, petAge, daysStay, and amountDue to be moved to Pet class later
-	String petType;
-	String petName;
-	int petAge;
-	int daysStay;
-	int dogSpaceNumber;
-	double dogWeight;
-	boolean grooming;
-	double amountDue;
+	//Initialized field variables.
+	private int dogSpaceNumber;
+	private double dogWeight;
+	private boolean grooming;
 	
-	//Default constructor for a Dog object. TODO: Change when making Pet class
+	//Default constructor for a Dog object.
+	//TODO: Change when adding Pet Class inheritance.
 	public Dog() {
-		petType = "Dog";
-		petName = "NoName";
-		petAge = 0;
-		daysStay = 0;
 		dogSpaceNumber = 0;
 		dogWeight = 0.0;
 		grooming = false;
-		amountDue = 0.0;
 	}
 	
-	//Overloaded constructor for Dog object. Able to pass each attribute as an argument. TODO: Change when making Pet class
-	public Dog(String petType, String petName, int petAge, int daysStay, int dogSpaceNumber, double dogWeight, boolean grooming, double amountDue) {
-		this.petType = petType;
-		this.petName = petName;
-		this.petAge = petAge;
-		this.daysStay = daysStay;
+	//Overloaded constructor for Dog object. Able to pass each attribute as an argument.
+	//TODO: Change when adding Pet class inheritance
+	public Dog(int dogSpaceNumber, double dogWeight, boolean grooming) {
 		this.dogSpaceNumber = dogSpaceNumber;
 		this.dogWeight = dogWeight;
 		this.grooming = grooming;
-		this.amountDue = amountDue;
-	}
-	
-	//Mutator for petType. TODO: move to Pet class in future assignment
-	public void setPetType(String inputPetType) {
-		this.petType = inputPetType;
-	}
-	
-	//Accessor for petType TODO: move to Pet class in future assignment
-	public String getPetType() {
-		return this.petType;
-	}
-	
-	//Mutator for petName TODO: move to Pet class in future assignment
-	public void setPetName(String inputPetName) {
-		this.petName = inputPetName;
-	}
-	
-	//Accessor for petName TODO: move to Pet class in future assignment
-	public String getPetName() {
-		return this.petName;
-	}
-		
-	//Mutator for petAge TODO: move to Pet class in future assignment
-	public void setPetAge(int inputPetAge) {
-		this.petAge = inputPetAge;
-	}
-	
-	//Accessor for petAge TODO: move to Pet class in future assignment
-	public int getPetAge() {
-		return this.petAge;
-	}
-	
-	//Mutator for daysStay TODO: move to Pet class in future assignment
-	public void setDaysStay(int inputDaysStay) {
-		this.daysStay = inputDaysStay;
-	}
-	
-	//Accessor for daysStay TODO: move to Pet class in future assignment
-	public int getDaysStay() {
-		return this.daysStay;
 	}
 	
 	//Mutator for dogSpaceNumber
@@ -115,16 +65,4 @@ public class Dog {
 	public boolean getGrooming() {
 		return this.grooming;
 	}
-	
-	//Mutator for amountDue TODO: move to Pet class with proper amounts later
-	public void setAmountDue(double insertAmountDue) {
-		this.amountDue = insertAmountDue;
-	}
-	
-	//Accessor for amountDue TODO: move to Pet class later
-	public double getAmountDue() {
-		return this.amountDue;
-	}
-	
-
 }
